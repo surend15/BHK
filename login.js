@@ -5,7 +5,6 @@ import Jerlin from 'react-native-vector-icons/Fontisto';
 import Mobile from 'react-native-vector-icons/Entypo';
 import Pass from 'react-native-vector-icons/FontAwesome5';
 import LinearGradient from 'react-native-linear-gradient';
-import Api from './logapi';
 import {StyleSheet,
     Text,
     View,
@@ -22,7 +21,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
     const[password, setPassword]=useState("");
     const Log=()=>{
       console.log(mobilenumber,password)
-      fetch('http://192.168.97.186:8000/signin',
+      fetch('http://192.168.152.186:8000/signin',
       {
       method: 'POST',
       headers: {

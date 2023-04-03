@@ -22,7 +22,7 @@ export default function Ecofri ({navigation}){
   const [imgpath,setimgpath]=useState('') 
   const [imgpath1,setimgpath1]=useState('')
  useEffect(()=>{
-      fetch('http://192.168.230.186:8000/eco',{
+      fetch('http://192.168.152.186:8000/eco',{
   method: 'post',
   headers: {
     'Content-Type': 'application/json',
@@ -43,7 +43,7 @@ export default function Ecofri ({navigation}){
     formdata.append("sqfit",txt1)
     formdata.append("cost",txt2)
     formdata.append("what",what)
-    fetch('http://192.168.230.186:8000/image',{
+    fetch('http://192.168.152.186:8000/image',{
 method: 'post',
 headers: {
 'Content-Type': 'multipart/form-data',
@@ -61,7 +61,7 @@ const gett=()=>{
   uril=moim.slice(1,27)
   let vv=moim.slice(27,moim.length-1);
   console.log("img",uril);
-  fetch('http://192.168.230.186:8000/eco',{
+  fetch('http://192.168.152.186:8000/eco',{
   method: 'post',
   headers: {
     'Content-Type': 'application/json',

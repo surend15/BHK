@@ -24,7 +24,7 @@ import {StyleSheet,
     const [referralcode, setReferralCode]=useState("");
     
     const Log=()=>{
-      fetch('http://192.168.230.186:8000/register',
+      fetch('http://192.168.152.186:8000/register',
       {
       method: 'POST',
       headers: {

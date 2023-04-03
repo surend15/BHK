@@ -24,7 +24,7 @@ export default function Appartments({navigation}){
   const [imgpath,setimgpath]=useState('') 
   const [imgpath1,setimgpath1]=useState('')
  useEffect(()=>{
-      fetch('http://192.168.97.186:8000/appart',{
+      fetch('http://192.168.152.186:8000/appart',{
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ var vv;
 const download=(e)=>{
   e.preventDefault()
   Axios({
-    url:'http://192.168.97.186:8000/download',
+    url:'http://192.168.152.186:8000/download',
   method: 'GET',
   responseType:'blob',
   }).then((res)=>{
@@ -56,7 +56,7 @@ const download=(e)=>{
     formdata.append("sqfit",txt1)
     formdata.append("cost",txt2)
     formdata.append("what",what)
-    fetch('http://192.168.97.186:8000/image',{
+    fetch('http://192.168.152.186:8000/image',{
 method: 'post',
 headers: {
 'Content-Type': 'multipart/form-data',
@@ -71,10 +71,10 @@ console.log(err)
 }
 var uril='';
 const gett=()=>{
-  uril=moim.slice(1,28)
-  vv=moim.slice(28,moim.length-1);
+  uril=moim.slice(1,29)
+  vv=moim.slice(29,moim.length-1);
   console.log("img",vv);
-  fetch('http://192.168.97.186:8000/appart',{
+  fetch('http://192.168.152.186:8000/appart',{
   method: 'post',
   headers: {
     'Content-Type': 'application/json',
